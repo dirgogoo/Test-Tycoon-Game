@@ -10,8 +10,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,16 +19,16 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout Code
+      - name: Checkout Code
       uses: actions/checkout@v3
 
-      -uses: Roblox/foreman@v1
+      - uses: Roblox/foreman@v1
       name: Install Foreman
       with:
-        version: "^1.0.0"
-        token: ${{ SECRETS.GITHUB_TOKEN }}
+          version: "^1.0.0"
+          token: ${{ SECRETS.GITHUB_TOKEN }}
       
-      -name: Lint
+      - name: Lint
       run: |
         selene ./modules
   
@@ -39,8 +37,8 @@ jobs:
     name: Styling
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v3
-      -uses: JonhnyMorganz/stylua-action@1.0.0
+      - uses: actions/checkout@v3
+      - uses: JonhnyMorganz/stylua-action@1.0.0
       with:
-        token: ${{ SECRETS.GITHUB_TOKEN }}
-        args: --check
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+          args: --check
