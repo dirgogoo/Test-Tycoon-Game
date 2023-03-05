@@ -1,0 +1,28 @@
+name: Deploy Staging
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  
+  deploy:
+    name: Deploy Stage
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - uses: Roblox/setup-foreman@v1
+      name: Install Foreman
+      with:
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+
+    -run: rojo build -o Tycoon.rblx
+
+    -run: rbxcloud experience publish --f Tycoon.rbxlx  --p 12698546053 --u 4451997071 --v published --a ${{ secrets.API_KEY_STAGE }}
