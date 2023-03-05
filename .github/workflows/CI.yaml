@@ -22,7 +22,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    - uses: Roblox/foreman@v1.1.0
+    - uses: Roblox/setup-foreman@v1
       name: Install Foreman
       with:
           token: ${{ SECRETS.GITHUB_TOKEN }}
