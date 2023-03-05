@@ -1,4 +1,4 @@
-name: Deploy Staging
+name: Deploy_Staging
 
 # Controls when the workflow will run
 on:
@@ -12,7 +12,7 @@ jobs:
   # This workflow contains a single job called "build"
   
   deploy:
-    name: Deploy - Stage
+    name: Deploy_Stage
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
@@ -23,6 +23,6 @@ jobs:
       with:
           token: ${{ SECRETS.GITHUB_TOKEN }}
 
-    -run: rojo build -o Tycoon.rblx
+    - run: rojo build -o Tycoon.rblx
 
-    -run: rbxcloud experience publish --f Tycoon.rbxlx  --p 12698546053 --u 4451997071 --v published --a ${{ secrets.API_KEY_STAGE }}
+    - run: rbxcloud experience publish --f Tycoon.rbxlx  --p 12698546053 --u 4451997071 --v published --a ${{ secrets.API_KEY_STAGE}}
