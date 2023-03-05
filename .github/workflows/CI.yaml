@@ -29,7 +29,7 @@ jobs:
       
     - name: Lint
       run: |
-        selene ./scr
+        selene ./src
   
   style:
 
@@ -40,5 +40,5 @@ jobs:
     - uses: JohnnyMorganz/stylua-action@v2
       with:
           token: ${{ SECRETS.GITHUB_TOKEN }}
-          version: 2.0.0
+          version: latest
           args: --check
