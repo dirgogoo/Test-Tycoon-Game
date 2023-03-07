@@ -7,7 +7,7 @@ on:
   # Only run the workflow for the main branc
     tag:
     # Only run the workflow for the main branch 
-      - "v*"
+    - 'v*'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
