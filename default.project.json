@@ -24,6 +24,7 @@
     },
 
     "Workspace": {
+      "$path": "assets/Workspace.rbxm",
       "$properties": {
         "FilteringEnabled": true
       },
@@ -51,6 +52,7 @@
       }
     },
     "Lighting": {
+      "$path": "assets/Lighting.rbxm",
       "$properties": {
         "Ambient": [
           0,

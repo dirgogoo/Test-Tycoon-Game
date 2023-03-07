@@ -24,6 +24,6 @@ jobs:
       with:
         token: ${{ SECRETS.GITHUB_TOKEN }}
 
-    - run: rojo build -o Tycoons.rbxl
+    - run: rojo build -o assets/Tycoons.rbxl
 
-    - run: rbxcloud experience publish --filename Tycoon.rbxl  --place-id 12715780249 --universe-id 4456983158 --version-type published --api-key ${{ secrets.API_KEY_STAGE}}
+    - run: rbxcloud experience publish --filename assets/Tycoon.rbxl  --place-id 12715780249 --universe-id 4456983158 --version-type published --api-key ${{ secrets.API_KEY_STAGE}}
