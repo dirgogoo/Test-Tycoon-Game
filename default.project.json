@@ -65,13 +65,13 @@
         "GlobalShadows": true,
         "Outlines": false,
         "Technology": "Voxel"
-      }
+      },
+      "$path": "assets/Lighting.rbxm"
     },
     "SoundService": {
       "$properties": {
         "RespectFilteringEnabled": true
-      },
-      "$path": "assets/Lighting.rbxm"
+      }
     }
   }
 }
