@@ -24,7 +24,6 @@
     },
 
     "Workspace": {
-      "$path": "assets/Workspace.rbxm",
       "$properties": {
         "FilteringEnabled": true
       },
@@ -49,10 +48,13 @@
             512
           ]
         }
-      }
+      },
+      "Terrain": {
+        "$className": "Terrain"
+      },
+      "$path": "assets/Workspace.rbxm"
     },
     "Lighting": {
-      "$path": "assets/Lighting.rbxm",
       "$properties": {
         "Ambient": [
           0,
@@ -68,7 +70,8 @@
     "SoundService": {
       "$properties": {
         "RespectFilteringEnabled": true
-      }
+      },
+      "$path": "assets/Lighting.rbxm"
     }
   }
 }

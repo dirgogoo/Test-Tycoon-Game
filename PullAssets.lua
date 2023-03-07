@@ -53,3 +53,5 @@ for _, serviceName in ipairs(SERVICES) do
 
 	remodel.writeModelFile(service, "assets/" .. serviceName .. ".rbxm")
 end
+
+-- Comando: remodel run PullAssets.lua
